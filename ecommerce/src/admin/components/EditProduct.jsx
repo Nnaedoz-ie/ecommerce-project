@@ -38,6 +38,7 @@ const EditProduct = () => {
     e.preventDefault();
 
     const updatedProduct = {
+      
       product,
       brand,
       price,
@@ -55,7 +56,7 @@ const EditProduct = () => {
         },
         body: JSON.stringify(updatedProduct),
       });
-      navigate('/admin/products'); // navigate back to products page
+      navigate('/'); // navigate back to products page
     } catch (error) {
       console.error('Error updating product:', error);
     }
@@ -77,7 +78,7 @@ const EditProduct = () => {
 
       <div style={{ marginBottom: '10px' }}>
         <label>Price</label>
-        <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} required style={{ width: '100%', padding: '8px' }} />
+        <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} required style={{ width: '100%', padding: '8px' }} />
       </div>
 
       <div style={{ marginBottom: '10px' }}>

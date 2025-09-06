@@ -57,18 +57,8 @@ const Products = () => {
               <td>{p.price}</td>
               <td>{p.rating}</td>
               <td>
-                <button
-                  className="btn-edit"
-                  onClick={() => navigate(`/admin/edit/${p.id}`)}
-                >
-                  Edit
-                </button>
-                <button
-                  className="btn-delete"
-                  onClick={() => handleDelete(p.id)}
-                >
-                  Delete
-                </button>
+                <button className="btn-edit" onClick={() => navigate(`/admin/edit/${p.id}`)} >Edit</button>
+                <button className="btn-delete" onClick={() => handleDelete(p.id)}>Delete</button>
               </td>
             </tr>
           ))}
