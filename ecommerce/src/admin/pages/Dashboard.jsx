@@ -1,31 +1,71 @@
-
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from "react";
 
 const Dashboard = () => {
-  const [postCount, setPostCount] = useState(0);
-  const [thepost, setThepost] = useState([]);
+  const [products, setProducts] = useState([]);
 
+  // Fetch products
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:5000/posts');
-        const data = await response.json();
-        console.log('Fetched posts:', data);
-        setThepost(data.length)
-      } catch (error) {
-        console.error('Error fetching posts:', error);
+        const res = await fetch("http://localhost:5000/items");
+        const data = await res.json();
+        setProducts(data);
+      } catch (err) {
+        console.error("Error fetching products:", err);
       }
     };
 
-    fetchPosts();
+    fetchProducts();
   }, []);
 
   return (
-    <div>
+    <div className="admin-dashboard">
       <h2>Dashboard</h2>
-      <div style={{ border: '1px solid #ccc', padding: '20px', borderRadius: '5px' }}>
-        <h3>Analytics</h3>
-        <p>Total Posts: {thepost}</p>
+
+      {/* Summary Cards */}
+      <div className="dashboard-cards">
+        <div className="card">
+          <h3>Total Products</h3>
+          <p>{products.length}</p>
+        </div>
+        <div className="card">
+          <h3>Average Rating</h3>
+          <p>
+            {products.length > 0
+              ? (
+                  products.reduce((sum, p) => sum + parseFloat(p.rating), 0) /
+                  products.length
+                ).toFixed(1)
+              : "N/A"}
+          </p>
+        </div>
+      </div>
+
+      {/* Latest Products */}
+      <div className="latest-products">
+        <h3>Latest Products</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Product</th>
+              <th>Brand</th>
+              <th>Price</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            {products.slice(-5).map((p) => (
+              <tr key={p.id}>
+                <td>{p.id}</td>
+                <td>{p.product}</td>
+                <td>{p.brand}</td>
+                <td>{p.price}</td>
+                <td>{p.rating}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

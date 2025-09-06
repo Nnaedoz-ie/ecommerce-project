@@ -7,8 +7,11 @@ import AdminLayout from './admin/pages/AdminLayout';
 import Dashboard from './admin/pages/Dashboard';
 import ManagePosts from './admin/pages/ManagePosts';
 import AddPostPage from './admin/pages/AddPostPage';
+import AddProduct from './admin/components/AddProducts';
 import EditPostPage from './admin/pages/EditPostPage';
+import EditProduct from './admin/components/EditPost';
 import ProductDetailsPage from './pages/ProductDetailPage';
+import Products from './admin/pages/Products';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -33,9 +36,12 @@ function App() {
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<Dashboard />} />
               <Route path="dashboard" element={<Dashboard />} />
-              <Route path="manage-posts" element={<ManagePosts />} />
-              <Route path="add-post" element={<AddPostPage />} />
-              <Route path="edit-post/:id" element={<EditPostPage />} />
+              <Route path="products" element={<Products />} />
+              <Route path="add-product" element={<AddProduct />} />
+              {/* <Route path="manage-posts" element={<ManagePosts />} /> */}
+              {/* <Route path="add-post" element={<AddPostPage />} /> */}
+              {/* <Route path="edit-post/:id" element={<EditPostPage />} /> */}
+              <Route path="edit/:id" element={<EditProduct />} />
             </Route>
           </Routes>
         </div>
