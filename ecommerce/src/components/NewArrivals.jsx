@@ -4,7 +4,7 @@ const NewArrivals = ({ move }) => {
   const navigate = useNavigate()
   return (
     <>
-      {move.slice(9, 17).map((arrival, index) => (
+      {move.slice(9,17).map((arrival, index) => (
         <div className="pro" key={index} onClick={() => navigate(`/product/${arrival.id}`)}>
           <img src={arrival.imageUrl} alt={arrival.product} />
 

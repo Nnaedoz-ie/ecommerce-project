@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
+    "@reduxjs/toolkit": "^2.9.0",
     "aos": "^2.3.4",
     "boxicons": "^2.1.4",
     "concurrently": "^9.2.0",
@@ -20,6 +21,7 @@
     "json-server": "^1.0.0-beta.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.8.2"
   },
   "devDependencies": {

@@ -266,5 +266,74 @@
       "title": "24/7 Customer Support",
       "description": "Our team is always ready to help with any questions or issues."
     }
+  ],
+  "Banner":[
+    {
+      "id":1,
+      "imageUrl":"https://i.pinimg.com/1200x/69/ef/9e/69ef9e78ed2ced227516ec53367d7f98.jpg",
+      "title":"Exclusive Offers",
+      "description":"Up to 50% off on selected items!",
+      "read":"Shop Now"
+    },
+    {
+      "id":2,
+      "imageUrl":"https://i.pinimg.com/736x/e7/9d/78/e79d787bbd756e91c7a64055db3ed535.jpg",
+      "title":"crazy deals",
+      "description":"Sign up for our newsletter and get exclusive discounts.",
+      "read":"learn more"
+    },
+    {
+      "id":3,
+      "images":"https://i.pinimg.com/736x/09/8c/68/098c68ef387f3f3950f5b40183468656.jpg",
+      "title":"New Arrivals",
+      "description":"Check out the latest additions to our collection."
+    },
+    
+    {
+      "id":4,
+      "images":"https://i.pinimg.com/736x/93/ae/b5/93aeb5a72703cfb0e55f4a193fa7fb0c.jpg",
+      "title":"Exclusive Offers",
+      "description":"Sign up for our newsletter and get exclusive discounts."
+    },
+    {
+      "id":5,
+      "images":"https://i.pinimg.com/736x/b3/8f/60/b38f60ac62ac4b1011ca898899d69dde.jpg",
+      "title":"Exclusive Offers",
+      "description":"Sign up for our newsletter and get exclusive discounts."
+    }
+  ],
+  "Blog":[
+     {"id":1,
+      "imageUrl":"https://i.pinimg.com/736x/52/e2/bf/52e2bf6330b8dcdb9e2370928fa94607.jpg",
+      "title":"",
+      "description":"Up to 50% off on selected items!"
+    },
+    {
+      "id":2,
+      "imageUrl":"https://i.pinimg.com/736x/20/5a/1f/205a1f9fa2d4f97ae9b31ea9373e8e30.jpg",
+      "title":"",
+      "description":"Sign up for our newsletter and get exclusive discounts."
+    },
+    {
+      "id":3,
+      "images":"https://i.pinimg.com/1200x/bc/bc/b6/bcbcb61c875e3412615c3ecbcdcbb9c7.jpg",
+      "title":"",
+      "description":"Check out the latest additions to our collection."
+    },
+    
+    {
+      "id":4,
+      "images":"https://i.pinimg.com/736x/c0/2b/ef/c02bef1ba29224dcb8d84b2e841e6da1.jpg",
+      "title":"shoes fashion",
+      "description":"Sign up for our newsletter and get exclusive discounts."
+    },
+    {
+      "id":5,
+      "images":"https://i.pinimg.com/1200x/46/d6/cc/46d6cca9ec7040661297100b783e5c1e.jpg",
+      "title":"kids fashion",
+      "description":"Sign up for our newsletter and get exclusive discounts."
+    }
   ]
+
+  
 }

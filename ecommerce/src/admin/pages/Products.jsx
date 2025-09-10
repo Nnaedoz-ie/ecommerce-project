@@ -5,7 +5,6 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
 
-  // Fetch products
   const fetchProducts = async () => {
     try {
       const res = await fetch("http://localhost:5000/items");
@@ -20,7 +19,6 @@ const Products = () => {
     fetchProducts();
   }, []);
 
-  // Delete product
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this product?")) return;
 

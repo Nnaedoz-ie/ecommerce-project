@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 const Dashboard = () => {
   const [products, setProducts] = useState([]);
 
-  // Fetch products
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -31,12 +30,7 @@ const Dashboard = () => {
         <div className="card">
           <h3>Average Rating</h3>
           <p>
-            {products.length > 0
-              ? (
-                  products.reduce((sum, p) => sum + parseFloat(p.rating), 0) /
-                  products.length
-                ).toFixed(1)
-              : "N/A"}
+            {products.length > 0 ? "⭐".repeat(Math.round(products.reduce((sum, p) => sum + p.rating.length, 0) / products.length)) : "N/A"}
           </p>
         </div>
       </div>

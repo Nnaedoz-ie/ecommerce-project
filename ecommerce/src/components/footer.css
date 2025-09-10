@@ -1,0 +1,139 @@
+.footer-main{
+    width: 100%;
+    /* background-color: #051833; */
+    z-index: 100;
+    left: 0;
+    right: 0;
+}
+
+.footer-main footer-container{
+    width: 100%;
+    right: 0;
+/* background-color: #051833; */
+
+   
+}
+.footer-container .footer-top{
+    width: 100%;
+    background-color: #031630;
+    height: 180px;
+  
+
+    
+}
+.footer-newsletter{
+    width: 90%;
+    display: flex;
+    margin-top: 90px;
+    margin-left: 60px;
+    margin-right: 65px;
+    justify-content: space-between;
+    align-items: center;
+    
+  
+}
+.footer-container .footer-top h2{
+    font-family: arial;
+    color: #fff;
+    margin-top: 50px;
+}
+.footer-container .footer-top p{
+    color: #cacbcb;
+    font-family: arial;
+
+}
+.footer-container .footer-top .span{
+    color: rgb(124, 124, 26);
+}
+.footer-container .footer-top .footer-input{
+    display: flex;
+    border: 1px solid #051833;
+  
+    align-items: center;
+    height: 50px;
+    width: 40%;
+    margin-top: 30px;
+
+}
+
+.footer-container .footer-top .footer-input .link{
+    height: 100%;
+    width: 30%;
+    background-color: #417f83;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius:7px ;
+
+    
+}
+.footer-container .footer-top .footer-input .link a{
+   display: flex;
+    justify-content: center;
+   height: 100%;
+   align-items: center;
+   text-decoration: none;
+   color: #fff;
+
+}
+.footer-container .footer-top .footer-input input{
+    height: 90%;
+    overflow:none;
+    width: 70%;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius:7px ;
+}
+.footer-container .footer-top .footer-input input:hover{
+    overlay: none;
+    outline: none;
+}
+
+.footer-container .footer-bottom{ 
+    width: 100%;
+    padding-top: 70px;
+   
+}
+.footer-bottom .footer-bottom-container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px;
+    /* background-color: blue; */
+}
+.footer-bottom .footer-contacts span{
+    display: flex;
+    align-items: center;
+    height: 30px;
+   
+}
+.footer-bottom .footer-contacts span p{
+    font-family: "spartan", sans-serif;
+    font-weight: lighter;
+   font-size: 15px;
+
+}
+.footer-bottom  a{
+    text-decoration: none;
+    color: black;
+    font-family: "spartan", sans-serif;
+    font-weight: lighter;
+   font-size: 15px;
+   
+}
+.footer-bottom  a:hover{
+    color: green;
+    
+}
+.footer-bottom h3{
+    font-family: "spartan", sans-serif;
+  font-size: medium;
+}
+.footer-bottom h4{
+    font-family: "spartan", sans-serif;
+    font-size: smaller;
+}
+.footer-copyright{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,52 @@
+.top-banner{
+  width: 100%;
+  display: flex;
+ 
+
+}
+.top-banner-container{
+height: 300px;
+width: 80%;
+margin:20px 70px;
+
+}
+
+.top-banner p{
+  margin-top: 100px;
+  color: #fff;
+  font-style: oblique;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-family:"spartan", sans-serif ;
+  margin-left: 20px;
+}
+.top-banner h2{
+  font-family: "spartan", sans-serif;
+  color: #fff;
+  margin-left: 20px;
+
+}
+.top-banner a{
+ border: 1px solid #fff;
+  font-family: "spartan", sans-serif;
+  padding: 10px 10px;
+  width: 10%;
+ text-decoration: none;
+  cursor: pointer;
+  margin-left: 20px;
+  color: #fff;
+}
+.top-banner a:hover{
+  background-color: green;
+  border: 1px solid green;
+}
+
+.bottom-banner{
+  width: 90%;
+  display: flex;
+  margin-left: 34px;
+}
+/* .down-banner-container{
+
+
+} */

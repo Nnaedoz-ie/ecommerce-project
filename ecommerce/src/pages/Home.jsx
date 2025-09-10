@@ -5,17 +5,22 @@ import ProductCard from '../components/ProductCard.jsx';
 import HeroSection from '../components/HeroSection.jsx';
 import WhyChooseUs from '../components/WhyChooseUs.jsx';
 import NewArrivals from '../components/NewArrivals.jsx';
+import Banner from '../components/Banner.jsx';
+import Bottombanner from '../components/bottombanner.jsx';
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const [items, setItems] = useState([]);
   const [why, setWhy] = useState([]);
+  const [banner, setBanner] = useState([])
   const [loading, setLoading] = useState(true);
   const [loadingItems, setLoadingItems] = useState(true);
   const [loadingwhy, setLoadingwhy] = useState(true);
+  const [loadingBanner, setLoadingBanner] = useState(true);
   const [error, setError] = useState(null);
   const [errorItems, setErrorItems] = useState(null);
   const [errorwhy, setErrorwhy] = useState(null);
+  const [errorBanner, setErrorBanner] = useState(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -63,17 +68,34 @@ const Home = () => {
       }
     };
 
+    const fetchBanner = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/Banner');
+        if (!response.ok) {
+          throw new Error('Failed to fetch banners');
+        }
+        const data = await response.json();
+        setBanner(data);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoadingBanner(false);
+      }
+    };
+
     
 
     fetchPosts();
     fetchitems();
     fetchwhy()
+    fetchBanner()
   }, []);
 
   if (loading || loadingItems || loadingwhy) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
   if (errorItems) return <div>Error: {error}</div>;
   if (errorwhy) return <div>Error: {error}</div>;
+  if (errorBanner) return <div>Error: {error}</div>;
 
   return (
     <div>
@@ -101,6 +123,21 @@ const Home = () => {
         </section>
         <WhyChooseUs move={why}/>
       </section>
+
+        <div className="top-banner">
+      {
+        banner.filter(value=>value.imageUrl).map(value => (
+          <Banner key={value.id} Banner={value} />
+        ))
+      }
+      </div>
+      <div className="bottom-banner">
+      {
+        banner.filter(value=>value.images).map(value => (
+          <Bottombanner key={value.id} Banner={value} />
+        ))
+      }
+      </div>
 
 
       

@@ -7,6 +7,7 @@ const AddProduct = () => {
     price: "",
     rating: "",
     imageUrl: "",
+    thumbnail: "" 
   });
 
   const handleChange = (e) => {
@@ -19,12 +20,19 @@ const AddProduct = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const newProduct = {
+      ...form,
+      thumbnail: form.thumbnail
+        ? form.thumbnail.split(",").map((t) => t.trim()) // convert string to array
+        : [],
+    };
+
     fetch("http://localhost:5000/items", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(form),
+      body: JSON.stringify(newProduct),
     })
       .then((res) => res.json())
       .then(() => {
@@ -35,6 +43,7 @@ const AddProduct = () => {
           price: "",
           rating: "",
           imageUrl: "",
+          thumbnail: "",
         });
       })
       .catch((err) => console.error("Error adding product:", err));
@@ -97,6 +106,16 @@ const AddProduct = () => {
             value={form.imageUrl}
             onChange={handleChange}
             required
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Thumbnail URLs (comma separated)</label>
+          <input
+            type="text"
+            name="thumbnail"
+            value={form.thumbnail}
+            onChange={handleChange}
           />
         </div>
 
