@@ -84,7 +84,7 @@ const AboutCard = () => {
         </section>
 
         
-      </main>
+      </main> 
     </div>
   )
 }
